@@ -124,7 +124,7 @@
 
         <p>Jetzt kannst Du zum ersten Mal den Sender testen: Drücke z.B. dort auf den A-Knopf. Wenn Du ihn loslässt sollte nach
             kurzer Verzögerung eine Meldung wie:
-            <span class="terminal">tele/rfbridge/RESULT </span>
+            <span class="terminal">tele/rfbridge/RFRECEIVED </span>
         </p>
         <h4>Einrichtung der Openhab Items und Regeln</h4>
         <h5>Openhab.cfg</h5>
@@ -142,7 +142,7 @@ mqtt:mosq.clientId=openhabclient</pre>
         <h5>Items</h5>
         <p>Packe folgende Zeile in deine .items Datei (oder ein neue z.B. rf.items):</p>
         <pre>
-String RfBridge &quot;RfKey [%s]&quot; {mqtt=&quot;&lt;[mosq:tele/rfbridge/RESULT:state:default]&quot;}</pre>
+String RfBridge &quot;RfKey [%s]&quot; {mqtt=&quot;&lt;[mosq:tele/rfbridge/RFRECEIVED:state:default]&quot;}</pre>
         <p>
             Das
             <span class="terminal">mosq</span> am Anfang ist der Name des Brokers das heisst wenn Du eine anderen Namen genommen hast, als in meinem
